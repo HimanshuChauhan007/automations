@@ -8,15 +8,15 @@ $Connection = test-netconnection -ComputerName "IP or DNS" -Port 6379 -WarningAc
 
 If($Connection.TcpTestSucceeded -ne $true){
 
-   Write-Output "0" | Out-File "D:\Redis_TCE_Connection\imp_tce_redis_master_file.txt" 
+   Write-Output "0" | Out-File "Directory path.txt" 
 
 }else { 
 
-     Write-Output "1" | Out-File "D:\Redis_TCE_Connection\imp_tce_redis_master_file.txt"
+     Write-Output "1" | Out-File "Directory path.txt"
 
 }
 
-$au = Get-Content -Path D:\Redis_TCE_Connection\imp_tce_redis_master_file.txt
+$au = Get-Content -Path Directory path.txt
 
 #Display output on Site24*7 
 
