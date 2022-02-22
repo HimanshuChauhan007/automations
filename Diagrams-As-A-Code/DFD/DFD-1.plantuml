@@ -1,0 +1,64 @@
+@startuml mtf_delete_dfd
+
+!theme blueprint
+
+skinparam style strictuml
+skinparam DefaultFontName Arial
+skinparam DefaultFontSize 16
+skinparam DefaultFontStyle bold
+skinparam ArrowThickness 2.2
+hide empty members
+
+class "Name" as Name {
+}
+
+class "A" as A {
+Type whatever you want
+}
+
+class "B" as B {
+Type whatever you want
+}
+
+class "B.1" as B.1 {
+Type whatever you want
+}
+
+class "B.2" as B.2 {
+Type whatever you want
+}
+
+class "B.3" as B.3 {
+Type whatever you want
+}
+
+class "C" as C {
+Type whatever you want
+}
+
+class "Name" as Name {
+}
+
+class "Name" as Name {
+}
+
+class "Name" as Name {
+}
+
+class "Name" as Name {
+}
+
+Name -up-> A: confirm to deactivate
+Name -right-> B: confirm to delete
+A -right-> Name: cancels the subscription
+B -down-> B.1
+B -right-> Name: pass asset information to delete
+B.1 -right-> Name: pass contact id to remove
+B.1 -down-> B.2
+B.2 -right-> Name: pass global user id
+B.2 -down-> B.3
+B.3 -right-> Name: pass contact id
+B.3 -left-> Name: Notify the Company Admin
+B.3 --down> C
+
+@enduml
