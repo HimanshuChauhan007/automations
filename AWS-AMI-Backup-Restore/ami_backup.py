@@ -12,7 +12,7 @@ source_image_resource = boto3.resource('ec2',source_region)
 dest_image_client = boto3.client('ec2','us-east-2')
 dest_image_resource  = boto3.resource('ec2','us-east-2')
 
-#AMI to be retained for the number of days in the destination region.
+#Mention AMI to be retained for the number of days in the destination region.
 ami_retention = 1
 
 def copy_latest_image():

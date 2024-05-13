@@ -2,6 +2,7 @@ token=`curl https://accounts.zoho.com/oauth/v2/token -X POST -d "client_id=XXXXX
  
 echo $token 
 
+#Get api for Site24*7
 curl https://www.site24x7.com/api/monitors/XXXXXXXXXXXX \
     -X PUT \
     -H "Content-Type: application/json;charset=UTF-8" \
